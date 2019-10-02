@@ -1,0 +1,10 @@
+{
+    "Bot": "The bot user that will represent QR Code",
+    "Bot_Description": "Create a bot user and type its username here.",
+    "Customize_Icon": "Customize Icon",
+    "Customize_Icon_Description": "Change the icon that is used for messages from this integration.",
+    "Customize_Name": "Customize Name",
+    "Customize_Name_Description": "Choose the username that this integration will post as.",
+    "Slash_Command_Description": "Creates a QR Code",
+    "Slash_Command_Params_Example": "[URL (e.g. https://rocketbooster.net)]"
+}

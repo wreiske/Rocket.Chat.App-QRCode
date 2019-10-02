@@ -1,0 +1,15 @@
+{
+    "id": "c63de499-44c3-4e9c-94bc-31824145af6e",
+    "version": "0.0.1",
+    "requiredApiVersion": "^1.4.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "RocketBooster",
+        "homepage": "https://rocketbooster.net",
+        "support": "https://github.com/wreiske/Rocket.Chat.App-QRCode/issues"
+    },
+    "name": "QRCode",
+    "nameSlug": "qrcode",
+    "classFile": "QRCodeApp.ts",
+    "description": "Generate QR Codes directly in Rocket.Chat conversations"
+}
