@@ -26,6 +26,13 @@ export class QRCodeCommand implements ISlashCommand {
                     /qrcode smsto:+1123456:This QR code app is sweet!
                     /qrcode tel:+1123456
                     /qrcode MATMSG:TO:email@example.com;SUB:A subject;BODY:your message;;`).setUsernameAlias(username).setAvatarUrl(icon);
+
+            const tid = context.getThreadId();
+
+            if (tid) {
+                builderError.setThreadId(tid);
+            }
+
             await modify.getNotifier().notifyUser(context.getSender(), builderError.getMessage());
             return;
         }
@@ -44,7 +51,12 @@ export class QRCodeCommand implements ISlashCommand {
             .setSender(/* botUser || */ context.getSender()).setRoom(context.getRoom())
             .setUsernameAlias(username).setAvatarUrl(icon).setAttachments([qrImage]);
 
-        await modify.getCreator().finish(builder);
+        const tid = context.getThreadId();
 
+        if (tid) {
+            builder.setThreadId(tid);
+        }
+
+        await modify.getCreator().finish(builder);
     }
 }
